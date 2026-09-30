@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { BadgeCheck, Globe, Mail, MessageCircle } from "lucide-react";
 import { LinkedInIcon } from "./LinkedInIcon";
 import {
@@ -28,12 +29,14 @@ export function AuthorSection() {
                   aria-hidden="true"
                   className="absolute -inset-3 rounded-full bg-gradient-to-br from-[#0070F3]/30 to-[#7928CA]/30 blur-xl"
                 />
-                <div
-                  role="img"
-                  aria-label="Foto de Ray Henrique"
-                  className="relative flex h-36 w-36 items-center justify-center rounded-full border border-white/15 bg-gradient-to-b from-[#1a1a1a] to-black text-4xl font-bold tracking-tighter text-white grayscale sm:h-44 sm:w-44"
-                >
-                  RH
+                <div className="relative h-36 w-36 overflow-hidden rounded-full border border-white/15 sm:h-44 sm:w-44">
+                  <Image
+                    src="/ray-henrique.jpg"
+                    alt="Foto de Ray Henrique"
+                    fill
+                    sizes="(max-width: 640px) 144px, 176px"
+                    className="object-cover grayscale"
+                  />
                 </div>
                 <span className="absolute -right-1 -bottom-1 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[#0A0A0A]">
                   <BadgeCheck className="h-5 w-5 text-[#0070F3]" aria-hidden="true" />
